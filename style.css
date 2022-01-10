@@ -1,0 +1,390 @@
+/* Banner section css */
+/* google font  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.banner {
+  display: flex;
+  height: 100vh;
+}
+
+.banner img {
+  border: 4px solid #22bedd;
+  width: 80%;
+  height: 80%;
+}
+
+.banner-left {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 60px;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+}
+
+.banner-title::before {
+  content: "Programming Hero";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #22bedd;
+  animation: typing 3s linear infinite;
+}
+.banner-text {
+  line-height: 2;
+  margin: 20px 0px;
+}
+
+.love-button {
+  outline: 0;
+  font-size: 18px;
+  padding: 10px 30px;
+  background-color: #22bedd;
+  color: #fff;
+  border: 4px solid #22bedd;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.love-button:hover {
+  background-color: transparent;
+  color: #22bedd;
+}
+
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  4% {
+    content: "J|";
+  }
+  8% {
+    content: "Ji|";
+  }
+  12% {
+    content: "Jik|";
+  }
+  16% {
+    content: "Jikl|";
+  }
+  20% {
+    content: "Jikle|";
+  }
+  24% {
+    content: "Jiklea|";
+  }
+  28% {
+    content: "Jiklear|";
+  }
+  32% {
+    content: "Jiklearn|";
+  }
+
+  36% {
+    content: "Jiklearn |";
+  }
+
+  40% {
+    content: "Jiklearn A|";
+  }
+  44% {
+    content: "Jiklearn Ac|";
+  }
+
+  48% {
+    content: "Jiklearn Aca|";
+  }
+  52% {
+    content: "Jiklearn Acad|";
+  }
+  56% {
+    content: "Jiklearn Acade|";
+  }
+  60% {
+    content: "Jiklearn Academ|";
+  }
+  63% {
+    content: "Jiklearn Academy|";
+  }
+  64%,
+  83% {
+    content: "Jiklearn Academy|";
+  }
+
+  84% {
+    content: "Jiklearn Academy|";
+  }
+  85% {
+    content: "Jiklearn Academ|";
+  }
+
+  86% {
+    content: "Jiklearn Acade|";
+  }
+  87% {
+    content: "Jiklearn Acad|";
+  }
+
+  88% {
+    content: "Jiklearn Aca|";
+  }
+
+  89% {
+    content: "Jiklearn Ac|";
+  }
+
+  90% {
+    content: "Jiklearn A|";
+  }
+
+  91% {
+    content: "Jiklearn |";
+  }
+  92% {
+    content: "Jiklearn|";
+  }
+
+  93% {
+    content: "Jiklear|";
+  }
+
+  94% {
+    content: "Jiklea|";
+  }
+  95% {
+    content: "Jikle|";
+  }
+
+  96% {
+    content: "Jikl|";
+  }
+  97% {
+    content: "Jik|";
+  }
+  98% {
+    content: "Ji|";
+  }
+  99% {
+    content: "J|";
+  }
+
+  100% {
+    content: "|";
+  }
+}
+
+/* Gallery section css  */
+
+#gallery {
+  height: 100vh;
+}
+
+.photo {
+  position: relative;
+  height: 280px;
+  width: 280px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.border {
+  background-color: #fff;
+  position: absolute;
+  transition: 0.7s ease-in-out;
+}
+
+.border.top,
+.border.bottom {
+  height: 4px;
+  width: 270px;
+}
+
+.border.left,
+.border.right {
+  height: 270px;
+
+  width: 4px;
+}
+
+.border.top {
+  top: 5px;
+  right: 100%;
+}
+
+.border.bottom {
+  bottom: 5px;
+  left: 100%;
+}
+
+.border.left {
+  left: 5px;
+  top: 100%;
+}
+.border.right {
+  right: 5px;
+  bottom: 100%;
+}
+
+.photo:hover .border.top {
+  right: 5px;
+}
+
+.photo:hover .border.bottom {
+  left: 5px;
+}
+
+.photo:hover .border.left {
+  top: 5px;
+}
+.photo:hover .border.right {
+  bottom: 5px;
+}
+
+.photo-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  padding-left: 30px;
+  transform: translateY(400px);
+
+  transition: 0.4s ease-out;
+}
+
+.photo:hover .photo-content {
+  transform: translateY(200px);
+}
+
+.photo::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.3s linear;
+}
+
+.photo:hover::before {
+  opacity: 1;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-title h1 {
+  color: #22bedd;
+  font-size: 40px;
+  margin: 50px 0px;
+  border-left: 3px solid #22bedd;
+  border-right: 3px solid #22bedd;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 0.8;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+  row-gap: 2em;
+
+  /* row-gap: 3%; */
+  flex-wrap: wrap;
+}
+/* fontawesome icon   */
+
+.fab {
+  color: red;
+  background-color: #fff;
+  font-size: 2em;
+  transition: transform 2s;
+}
+
+.fab:hover {
+  transform: translate(500px, 500px);
+}
+
+/* table practice  */
+
+td,
+th {
+  border: 1px solid grey;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+}
+
+/* positioning practice  */
+
+.swimming div {
+  width: 200px;
+  height: 200px;
+
+  border: 2px solid lightcoral;
+}
+
+.swimming {
+  position: relative;
+}
+
+.boy {
+  background-color: lightcoral;
+  position: relative;
+  top: 150px;
+  z-index: 2;
+}
+
+.ring {
+  background-color: red;
+
+  position: relative;
+  z-index: 1;
+}
+
+.water {
+  background-color: lightskyblue;
+  position: relative;
+  top: -100px;
+}
+
+.dummy {
+  height: 1000px;
+}
